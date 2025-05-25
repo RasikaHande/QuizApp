@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Quiz.css">
+    
+    <title>Quiz Application</title>
+    <script src="Quiz.js"></script>
+</head>
+<body>
+
+    <div class="container" id="home-container">
+        <div class="logo">
+            <img src="https://softwarevital.com/wp-content/uploads/2020/07/testbook-logo.jpg" alt="TestBook logo">
+        </div>
+        <h1>Welcome to the Quiz</h1>
+        <p>Select a quiz category to begin:</p>
+
+        <input type="text" id="username" placeholder="Enter your name">
+
+        <div class="categories" id="categories">
+            <button class="button" onclick="selectCategory('HTML')">HTML</button>
+            <button class="button" onclick="selectCategory('CSS')">CSS</button>
+            <button class="button" onclick="selectCategory('JavaScript')">JavaScript</button>
+            <button class="button" onclick="selectCategory('DSA')">DSA</button>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+            <div id="quiz-question" class="quiz-question"></div>
+            <div id="options" class="options"></div>
+            <div id="timer"></div>
+            <input type="button" value="Next" onclick="nextQuestion()">
+        </div>
+
+        <div class="result-container" id="result-container">
+            <h2>Quiz Results</h2>
+            <p>Username: <span id="result-username"></span></p>
+            <p>Total Questions: <span id="total-questions"></span></p>
+            <p>Correct Answers: <span id="correct-answers"></span></p>
+            <p>Wrong Answers: <span id="wrong-answers"></span></p>
+            <p>Skipped Questions: <span id="skipped-questions"></span></p>
+            <p>Total Marks: <span id="total-marks"></span></p>
+            <p>Percentage: <span id="percentage"></span>%</p>
+            <p>Grade: <span id="grade"></span></p>
+            <input type="button" class="button" value="Back to Home" onclick="showHome()">
+        </div>
+    </div>
+
+   
+</body>
+</html>
